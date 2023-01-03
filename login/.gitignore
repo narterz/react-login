@@ -6,6 +6,7 @@
 .pnp.js
 /public
 /img
+.readme.txt
 
 # testing
 /coverage
