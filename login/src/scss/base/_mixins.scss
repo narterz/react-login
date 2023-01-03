@@ -1,0 +1,13 @@
+@mixin flex-content($direction, $content) {
+    display: flex;
+    justify-content: $content;
+    flex-direction: $direction;
+}
+
+@function map-keys($map, $keys...){
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+

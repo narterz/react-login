@@ -1,0 +1,50 @@
+@use './breakpoints' as media;
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&display=swap');
+
+$font-styles: (
+    weight:(bold: 800,
+        normal: 300),
+
+    size:(large: 3rem,
+        normal: 1rem,
+    ),
+);
+
+body {
+    font-family: 'Kanit', sans-serif;
+
+    .form__container {
+
+        label { font-weight: 800; }
+
+        &#form__header {
+
+            h1 {
+                font-weight: 800;
+                font-style: italic;
+                @include media.phone { font-size: 2rem; } 
+                @include media.tablet { font-size: 2.5rem; }
+                @include media.desktop { font-size: 3rem; }
+            }
+
+            p {
+                font-weight: 300;
+                font-style: italic;
+                font-size: 1rem;
+                @include media.phone { font-size: 0.9rem; }
+                @include media.tablet { font-size: 1rem; }
+            }
+        }
+    }
+
+    #form__password li {
+        @include media.phone { font-size: 0.8rem; }
+        @include media.tablet { font-size: 0.9rem; }
+    }
+
+    #password-options {
+        font-weight: 800;
+
+        button { font-weight: inherit; }
+    }
+}

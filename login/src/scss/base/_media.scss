@@ -1,0 +1,37 @@
+@use './breakpoints' as media;
+
+form {
+    @include media.phone {
+        width: 90%;
+        height: 80%;
+    }
+
+    @include media.tablet {
+        height: 75%;
+        width: 50%;
+    }
+
+    @include media.desktop {
+        height: 75%;
+        width: 25%;
+    }
+
+    #form__header {
+        @include media.phone { height: 30%; }
+    }
+
+    #form__password {
+        @include media.phone { height: 50%; }
+        @include media.tablet { height: 50%; } 
+    }
+}
+
+.accept__container {
+    @include media.phone {
+        height: 80%;
+        width: 90%;
+    }
+    @include media.tablet { width: 50%; }
+    @include media.desktop { width: 25% }
+}
+

@@ -1,0 +1,17 @@
+@use './mixins' as mix;
+
+.accept__container {
+    height: 75%;
+    width: 35%;
+    @include mix.flex-content(column, space-evenly);
+    align-items: center;
+    text-align: center;
+    filter: blur(0px);
+
+    .accept__section {
+        height: 33%;
+        width: 100%;
+        @include mix.flex-content(column, center);
+        align-items: center;
+    }
+}

@@ -1,0 +1,17 @@
+@use './colors' as color;
+
+.login-btn {
+    border-radius: 30px;
+    width: 80%;
+    height: 30%;
+    margin: auto auto;
+    cursor: pointer;
+    border: none;
+    background-color: map-get(color.$colors, main);
+    color: white;
+
+    &:hover {
+        transition: 250ms opacity ease-in;
+        opacity: 0.8;
+    }
+}

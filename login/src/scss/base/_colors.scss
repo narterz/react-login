@@ -1,0 +1,59 @@
+$colors: (
+    main: #5138ed,
+    secondary: #3521b5,
+    form-background: #ffffff,
+    border: #f1f1f4,
+    sub-text: #646363
+);
+
+form {
+    background-color: white;
+
+    .form__container {
+
+        input {
+            border: 2px solid map-get($colors, border);
+
+            &:focus {
+                outline: none;
+                border: 2px solid map-get($colors, main);
+            }
+        }
+
+        p { color: rgb(100, 99, 99); }
+
+        #forget {
+            color: map-get($colors, main);
+
+            &:hover {
+                transition: 250ms opacity ease-in;
+                opacity: 0.8;
+            }
+        }
+
+        .login-btn {
+            background-color: map-get($colors, main);
+            color: white;
+
+            &:hover {
+                transition: 250ms opacity ease-in;
+                opacity: 0.8;
+            }
+        }
+
+        .logo #bolt { color: map-get($colors, main); }
+    }
+}
+
+
+//Accept Page
+
+.cont {
+    background-color: map-get($colors, main);
+
+    .accept__container { background-color: #fff; }
+
+    #accept__btn { color: white; }
+}
+
+

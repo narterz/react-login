@@ -1,0 +1,81 @@
+@use './mixins' as flex;
+@use './media' as media;
+
+
+form {
+    filter: blur(0px);
+    border: 2px solid black;
+    @include flex.flex-content(column, space-evenly);
+    align-items: center;
+
+    .form__container {
+        width: 90%;
+        @include flex.flex-content(column, space-evenly);
+
+        input {
+            height: 40%;
+            border-radius: 20px;
+            text-indent: 15px;
+        }
+
+        &#form__header {
+            height: 25%;
+
+            #bolt {
+                height: 50px;
+                width: 30px;
+            }
+        }
+
+        &#form__username { height: 13%; }
+
+        &#form__password {
+            height: 17%;
+            @include flex.flex-content(column, space-between);
+    
+            #form__requires {
+                @include flex.flex-content(row, space-between);
+                list-style-type: none;
+                width: 100%;
+                margin-top: 10px;
+    
+                li {
+                    width: 33%;
+                    @include flex.flex-content(row, space-evenly);
+                    align-items: center;
+                }
+    
+            }
+    
+            .password__child { height: 33%; }
+        }
+
+        &.checks {
+            height: 30%;
+
+            #checks-wrapper {
+                @include flex.flex-content(row, space-between);
+                margin-top: 30px;
+
+                #checkbox { margin-right: 10px; }
+
+                #forget { text-decoration: none; }
+            }
+             
+            #password-btn {
+                border-radius: 30px;
+                width: 80%;
+                height: 30%;
+                margin: auto auto;
+                cursor: pointer;
+                border: none;
+            }
+        }
+    }
+ 
+    hr {
+        height: 4px;
+        width: 80%;
+        color: rgb(155, 151, 151);
+    }
+}
